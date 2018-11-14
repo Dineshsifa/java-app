@@ -13,7 +13,7 @@ pipeline {
         }
 	    stage ('deploy') {
 		    steps {
-			 sh 'ssh-keyscan -H 192.168.1.5 >> ~/.ssh/known_hosts /var/lib/jenkins/workspace/pipeline project/java-sample-app/target/java-sample-app-1.0.0.war root@192.168.1.5:/usr/share/tomcat/webapp'
+			 sh 'scp ssh-keyscan -H 192.168.1.5 >> ~/.ssh/known_hosts /var/lib/jenkins/workspace/pipeline project/java-sample-app/target/java-sample-app-1.0.0.war root@192.168.1.5:/usr/share/tomcat/webapp'
 		    }
 	    }
 	    
