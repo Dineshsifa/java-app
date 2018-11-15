@@ -13,7 +13,7 @@ pipeline {
 	}
 	    stage ('deploy') {
 		    steps {
-			 sh 'ansibleTower credential: 'windows10', extraVars: '', importTowerLogs: true, importWorkflowChildLogs: false, inventory: 'windows inventory', jobTags: '', jobTemplate: 'windows template', jobType: 'run', limit: '', removeColor: false, skipJobTags: '', templateType: 'job', towerServer: 'tower', verbose: true'
+			 ansibleTower credential: 'windows10', extraVars: '', importTowerLogs: true, importWorkflowChildLogs: false, inventory: 'windows inventory', jobTags: '', jobTemplate: 'windows template', jobType: 'run', limit: '', removeColor: false, skipJobTags: '', templateType: 'job', towerServer: 'tower', verbose: true
 
 		    }
 	    }
